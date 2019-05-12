@@ -1,4 +1,4 @@
-const queryStringParser = require('./queryStringParser');
+import queryStringParser from "./queryStringParser";
 
 test('parses and splits', () => {
     const input = "a=1&b=2";
