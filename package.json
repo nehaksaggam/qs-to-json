@@ -1,0 +1,29 @@
+{
+  "name": "qs-to-json",
+  "homepage": "https://github.com/neha-saggam/qs-to-json",
+  "repository": "github:neha-saggam/qs-to-json",
+  "bugs": {
+    "url": "https://github.com/neha-saggam/qs-to-json/issues"
+  },
+  "version": "0.0.1",
+  "description": "",
+  "main": "queryStringParser.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Neha Saggam & Vivek Jain",
+  "license": "ISC",
+  "jest": {
+    "bail": 1,
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "babel-jest": "^24.8.0"
+  }
+}
