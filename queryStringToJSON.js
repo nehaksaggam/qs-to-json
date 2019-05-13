@@ -1,9 +1,9 @@
 const queryStringToJSON = (queryString) => {
     const queryParams = queryString.split("&");
     const params = {};
-    for (const index = 0; index < queryParams.length; index++) {
-        const queryParam = queryParams[index];
-        if (queryParam && isValid(queryParam)) {
+    const validQueryParams = queryParams.filter((queryParam) => isValid(queryParam));
+    for (let index = 0; index < validQueryParams.length; index++) {
+        const queryParam = validQueryParams[index];
             const { key, value } = getKeyValuePair(queryParam);
             if(isArray(key)) {
                 const arrayName = key.split("[]")[0];
@@ -14,8 +14,6 @@ const queryStringToJSON = (queryString) => {
                 continue;
             }
             params[key] = value;
-        }
-
     }
     return params;
 }
@@ -27,7 +25,7 @@ function isArray(key) {
 }
 
 function isValid(queryParam) {
-    return queryParam.trim().length;
+    return queryParam && queryParam.trim().length;
 }
 
 function getKeyValuePair(queryParam) {
