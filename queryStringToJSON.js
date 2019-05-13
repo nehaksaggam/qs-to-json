@@ -1,4 +1,4 @@
-export default function queryStringParser(queryString) {
+const queryStringToJSON = (queryString) => {
     const queryParams = queryString.split("&");
     const params = {};
     for (let index = 0; index < queryParams.length; index++) {
@@ -18,3 +18,5 @@ export default function queryStringParser(queryString) {
     }
     return params;
 }
+
+export default queryStringToJSON;
