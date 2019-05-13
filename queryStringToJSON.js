@@ -1,22 +1,40 @@
 const queryStringToJSON = (queryString) => {
     const queryParams = queryString.split("&");
     const params = {};
-    for (let index = 0; index < queryParams.length; index++) {
+    for (const index = 0; index < queryParams.length; index++) {
         const queryParam = queryParams[index];
-        const param = queryParam.split("=");
-        const key = param[0];
-        if (key.endsWith("[]")) {
-            //Query string is an array
-            const arrayName = key.split("[]")[0];
-            if(!params.hasOwnProperty(arrayName)) {
-                params[arrayName] = [];
+        if (queryParam && isValid(queryParam)) {
+            const { key, value } = getKeyValuePair(queryParam);
+            if(isArray(key)) {
+                const arrayName = key.split("[]")[0];
+                if (!isArrayPresent(params, arrayName)) {
+                    params[arrayName] = [];
+                }
+                params[arrayName].push(value);
+                continue;
             }
-            params[arrayName].push(param[1]);
-            continue;
+            params[key] = value;
         }
-        params[key] = param[1];
+
     }
     return params;
 }
 
 export default queryStringToJSON;
+
+function isArray(key) {
+    return key.endsWith("[]");
+}
+
+function isValid(queryParam) {
+    return queryParam.trim().length;
+}
+
+function getKeyValuePair(queryParam) {
+    const param = queryParam.split("=");
+    return { key: param[0], value: param[1] };
+}
+
+function isArrayPresent(params, array) {
+   return params.hasOwnProperty(array)
+}
