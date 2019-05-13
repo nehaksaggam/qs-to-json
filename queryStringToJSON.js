@@ -30,7 +30,7 @@ function isValid(queryParam) {
 
 function getKeyValuePair(queryParam) {
     const param = queryParam.split("=");
-    return { key: param[0], value: param[1] };
+    return { key: param[0].trim(), value: param[1] };
 }
 
 function isArrayPresent(params, array) {
