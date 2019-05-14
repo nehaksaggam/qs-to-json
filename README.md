@@ -1,6 +1,8 @@
 # Query String to JSON
+[![CircleCI](https://circleci.com/gh/neha-saggam/qs-to-json/tree/master.svg?style=svg)](https://circleci.com/gh/neha-saggam/qs-to-json/tree/master)
 
 Library to parse given query string and create a JSON object.
+
 
 ## Installation
 
@@ -15,6 +17,8 @@ npm install --save-dev qs-to-json
 - Currently, it supports simple query string and an array
 
 ## Example
+
+**NOTE:** : qs-to-json currently does not decode the query string. Make sure you pass decoded queryString.
 
 1. Convert "&a=1&b=2" to a JSON object:
 
