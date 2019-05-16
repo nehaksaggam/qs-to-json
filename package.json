@@ -10,7 +10,7 @@
   "main": "queryStringParser.js",
   "scripts": {
     "test": "jest --coverage --coverageDirectory=coverage/jest",
-    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
+    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
     "lint-md": "remark ."
   },
   "remarkConfig": {
