@@ -1,6 +1,6 @@
 # Query String to JSON
 
-![](https://img.shields.io/circleci/project/github/neha-saggam/qs-to-json.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7798c697c4e14194aec01811ea8c69f7)](https://www.codacy.com/app/neha-saggam/qs-to-json?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=neha-saggam/qs-to-json&amp;utm_campaign=Badge_Grade)
+![](https://img.shields.io/circleci/project/github/neha-saggam/qs-to-json.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7798c697c4e14194aec01811ea8c69f7)](https://www.codacy.com/app/neha-saggam/qs-to-json?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=neha-saggam/qs-to-json&amp;utm_campaign=Badge_Grade) ![](https://img.shields.io/codacy/coverage/7798c697c4e14194aec01811ea8c69f7.svg)
 
 Library to parse given query string and create a JSON object.
 
