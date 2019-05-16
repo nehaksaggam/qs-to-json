@@ -9,7 +9,7 @@
   "description": "",
   "main": "queryStringParser.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage --coverageDirectory=coverage/jest"
   },
   "author": "Neha Saggam & Vivek Jain",
   "license": "MIT",
