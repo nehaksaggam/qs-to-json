@@ -1,8 +1,6 @@
-# Query String to JSON
-[![CircleCI](https://circleci.com/gh/neha-saggam/qs-to-json/tree/master.svg?style=svg)](https://circleci.com/gh/neha-saggam/qs-to-json/tree/master)
+# Query String to JSON ![](https://img.shields.io/circleci/project/github/neha-saggam/qs-to-json.svg)
 
 Library to parse given query string and create a JSON object.
-
 
 ## Installation
 
