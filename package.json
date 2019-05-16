@@ -10,6 +10,7 @@
   "main": "queryStringParser.js",
   "scripts": {
     "test": "jest --coverage --coverageDirectory=coverage/jest",
+    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
     "lint-md": "remark ."
   },
   "remarkConfig": {
@@ -33,6 +34,7 @@
   "dependencies": {
     "@babel/core": "^7.4.4",
     "babel-jest": "^24.8.0",
+    "codacy-coverage": "^3.4.0",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2"
