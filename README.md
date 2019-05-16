@@ -12,13 +12,13 @@ npm install --save-dev qs-to-json
 
 ## Support
 
-- Currently, it supports simple query string and an array
+1.  Currently, it supports simple query string and an array
 
 ## Example
 
 **NOTE:** : qs-to-json currently does not decode the query string. Make sure you pass decoded queryString.
 
-1. Convert "&a=1&b=2" to a JSON object:
+1.  Convert "&a=1&b=2" to a JSON object:
 
 ```javascript
 import queryStringToJSON from 'qs-to-json';
@@ -37,7 +37,7 @@ Output would be the following:
 }
 ```
 
-2. Convert "&a[]=1&a[]=2" to a JSON object:
+2.  Convert "&a[]=1&a[]=2" to a JSON object:
 
 ```javascript
 import queryStringToJSON from 'qs-to-json';
