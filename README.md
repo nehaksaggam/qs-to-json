@@ -53,7 +53,7 @@ Output would be the following:
 
 ```json
 {
-  a: [ "1", "2" ]
+  "a" : [ "1", "2" ]
 }
 ```
 
