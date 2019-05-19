@@ -1,4 +1,4 @@
-import queryStringToJSON from "../lib/index.js";
+import queryStringToJSON from "../src/queryStringToJSON";
 
 test("Given 'a=1&b=2' returns { 'a': '1', 'b': '2' }", () => {
     const input = "a=1&b=2";
