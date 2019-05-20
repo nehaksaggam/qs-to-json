@@ -1,0 +1,8 @@
+node_modules/*
+coverage/*
+.circleci/*
+test/*
+webpack.config.js
+.babelrc
+package-lock.json
+src/*
