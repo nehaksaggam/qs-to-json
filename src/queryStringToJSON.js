@@ -15,6 +15,10 @@ function isArrayPresent(params, array) {
    return params.hasOwnProperty(array);
 }
 
+function isNestedObject(key) {
+    return key.includes(".") && (key.indexOf(".") !== key.length - 1);
+}
+
 const queryStringToJSON = (queryString) => {
     const queryParams = queryString.split("&");
     const params = {};
@@ -28,6 +32,12 @@ const queryStringToJSON = (queryString) => {
                 params[arrayName.toString()] = [];
             }
             params[arrayName.toString()].push(value);
+            return;
+        }
+        else if(isNestedObject(key)) {
+            const [ parentObject, childObject ] = key.split(".");
+            params[parentObject] = {};
+            params[parentObject][childObject] = value;
             return;
         }
         params[key.toString()] = value;

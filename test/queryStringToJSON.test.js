@@ -84,3 +84,24 @@ test("Given 'a[]=1&b[]=2&a=[]=3' returns { a: ['1', '3'], b: ['2'] }", () => {
     const expectedOutput = { a : ["1", "3"], b: ["2"] };
     expect(output).toStrictEqual(expectedOutput);
 });
+
+test("Given 'a=Nick&b=John' should return { 'a': 'Nick', 'b': 'John' }", () => {
+    const input = 'a=Nick&b=John';
+    const output = queryStringToJSON(input);
+    const expectedOutput = {
+        a: 'Nick',
+        b: 'John'
+    };
+    expect(output).toStrictEqual(expectedOutput);
+});
+
+test("Given 'a.name=Nick&b.name=John' should return { 'a': { 'name': 'Nick' }, 'b': { 'name':  'John' } }", () => {
+    const input = 'a.name=Nick&b.name=John';
+    const output = queryStringToJSON(input);
+    const expectedOutput = {
+        a: { name: 'Nick' },
+        b: { name: 'John' }
+    };
+    console.log("output: ", output);
+    expect(output).toStrictEqual(expectedOutput);
+});
