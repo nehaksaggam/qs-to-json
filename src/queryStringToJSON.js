@@ -36,8 +36,8 @@ const queryStringToJSON = (queryString) => {
         }
         else if(isNestedObject(key)) {
             const [ parentObject, childObject ] = key.split(".");
-            params[parentObject] = {};
-            params[parentObject][childObject] = value;
+            params[parentObject.toString()] = {};
+            params[parentObject][childObject.toString()] = value;
             return;
         }
         params[key.toString()] = value;

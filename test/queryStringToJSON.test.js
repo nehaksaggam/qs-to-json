@@ -95,13 +95,12 @@ test("Given 'a=Nick&b=John' should return { 'a': 'Nick', 'b': 'John' }", () => {
     expect(output).toStrictEqual(expectedOutput);
 });
 
-test("Given 'a.name=Nick&b.name=John' should return { 'a': { 'name': 'Nick' }, 'b': { 'name':  'John' } }", () => {
-    const input = 'a.name=Nick&b.name=John';
+test(`Given "a.name=Nick&b.name=John" should return { "a": { "name": "Nick" }, "b": { "name":  "John" } }`, () => {
+    const input = "a.name=Nick&b.name=John";
     const output = queryStringToJSON(input);
     const expectedOutput = {
-        a: { name: 'Nick' },
-        b: { name: 'John' }
+        a: { name: "Nick" },
+        b: { name: "John" }
     };
-    console.log("output: ", output);
     expect(output).toStrictEqual(expectedOutput);
 });
