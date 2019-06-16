@@ -5,6 +5,14 @@
   "bugs": {
     "url": "https://github.com/neha-saggam/qs-to-json/issues"
   },
+  "keywords": [
+    "querystring",
+    "json",
+    "parse",
+    "url",
+    "query",
+    "javascriptobject"
+  ]
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
