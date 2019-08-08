@@ -53,6 +53,9 @@ Output would be the following:
 }
 ```
 
+## Playground
+https://neha-saggam.github.io/qs-to-json-gh-pages/
+
 ## Contributing
 
 We accept pull requests :D
