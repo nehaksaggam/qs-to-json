@@ -11,7 +11,12 @@
     "parse",
     "url",
     "query",
-    "javascriptobject"
+    "javascriptobject",
+    "params",
+    "parameters",
+    "query-params",
+    "parse",
+    "query string to json"
   ],
   "version": "0.1.2",
   "description": "",
